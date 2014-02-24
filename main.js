@@ -1,3 +1,19 @@
+/**
+ * 
+ *
+ * A Game of Snake, 2014
+ * Created by Chris R.
+ *
+ *
+ * Usage: Use your mouse to control the snake
+ * 		  Eat the food to grow the snake
+ *		  You lose when you hit the border or yourself
+ *		  Refresh the page when dead to restart the game
+ *
+ *
+ * Created for the Advacned Javascript Course
+ */
+ 
 var FOODNUM = 0;
 var SNAKENUM = 0;
 
