@@ -109,6 +109,7 @@ window.onload = function() {
             // End the game if the snake hits the boundaries 
             if(snake[0].x <= 0 || snake[0].y <= 0 || snake[0].x >= 304 || snake[0].y >= 304) {
                 game.end(0, "Goal");
+                alert('game over! score: ' + SNAKENUM);
             }
 
             // Move up
@@ -191,6 +192,7 @@ window.onload = function() {
 				for(var i = SNAKENUM; i > 0; i--) {
 					if (pixelDistance(snake[0],snake[i]) < 16) {
 						game.end(0, "Goal");
+						alert('game over! score: ' + SNAKENUM);
 					}
 				}
 			}
