@@ -82,7 +82,7 @@ window.onload = function() {
     game.fps = 16;
 
     // Load Images
-    game.preload('sprite.png','snake4.png');
+    game.preload('sprite.png','snake6.png');
 
     // Called when the loading is complete
     game.onload = function() {
@@ -91,7 +91,7 @@ window.onload = function() {
         var bg = new Sprite(520, 570);
         bg.backgroundColor = "#fff000";
         var image = new Surface(320, 320);
-        bg.image = game.assets['snake4.png'];
+        bg.image = game.assets['snake6.png'];
         game.rootScene.addChild(bg);
         
 
@@ -197,6 +197,8 @@ window.onload = function() {
 					}
 				}
 			}
+			
+			
 			
         });
     };
