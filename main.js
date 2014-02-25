@@ -65,14 +65,9 @@ function spawnFood(number, game) {
 		food[number] = new Sprite(16, 16);
         food[number].image  = game.assets['sprite.png'];
         var randomnumber = Math.floor(Math.random() * (20 - 3 + 1)) + 3;
-<<<<<<< HEAD
         var randomnumber2 = Math.floor(Math.random() * (20 - 3 + 1)) + 3;
         var int1 = 100 + (randomnumber * 16) - 32;
         var int2 = 100 + (randomnumber2 * 16) - 32;
-=======
-        var int1 = (randomnumber * 16) - 32;
-        var int2 = (randomnumber * 16) - 32;
->>>>>>> e424b424e96c2b26795d3577ec75d8757b756660
         food[number].x      = int1;
         food[number].y      = int2;
         food[number].anim   = [0];
