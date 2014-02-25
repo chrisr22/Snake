@@ -64,9 +64,10 @@ function spawnFood(number, game) {
 		var food = new Array();
 		food[number] = new Sprite(16, 16);
         food[number].image  = game.assets['sprite.png'];
-        var randomnumber = Math.floor(Math.random() * (20 - 2 + 1)) + 2;
-        var int1 = (randomnumber * 16) - 32;
-        var int2 = (randomnumber * 16) - 32;
+        var randomnumber = Math.floor(Math.random() * (20 - 3 + 1)) + 3;
+        var randomnumber2 = Math.floor(Math.random() * (20 - 3 + 1)) + 3;
+        var int1 = 100 + (randomnumber * 16) - 32;
+        var int2 = 100 + (randomnumber2 * 16) - 32;
         food[number].x      = int1;
         food[number].y      = int2;
         food[number].anim   = [0];
@@ -77,27 +78,27 @@ function spawnFood(number, game) {
 
 window.onload = function() {
     // Create a game object
-    var game = new Core(320, 320);
+    var game = new Core(520, 570);
     game.fps = 16;
 
     // Load Images
-    game.preload('sprite.png','snakebg.png');
+    game.preload('sprite.png','snake4.png');
 
     // Called when the loading is complete
     game.onload = function() {
         var a = 0;
         // Create the background
-        var bg = new Sprite(320, 320);
+        var bg = new Sprite(520, 570);
         bg.backgroundColor = "#fff000";
         var image = new Surface(320, 320);
-        bg.image = game.assets['snakebg.png'];
+        bg.image = game.assets['snake4.png'];
         game.rootScene.addChild(bg);
         
 
 
         // Create snake
         var snake = new Array();
-        snake[0] = spawnSegment(game, 160, 160);
+        snake[0] = spawnSegment(game, 260, 260);
         
         // Create food
 		var food = new Array();
@@ -107,7 +108,7 @@ window.onload = function() {
         snake[0].addEventListener(Event.ENTER_FRAME, function() {
             
             // End the game if the snake hits the boundaries 
-            if(snake[0].x <= 0 || snake[0].y <= 0 || snake[0].x >= 304 || snake[0].y >= 304) {
+            if(snake[0].x <= 100 || snake[0].y <= 100 || snake[0].x >= 404 || snake[0].y >= 404) {
                 game.end(0, "Goal");
                 alert('game over! score: ' + SNAKENUM);
             }
@@ -184,7 +185,7 @@ window.onload = function() {
 				FOODNUM = FOODNUM + 1;
 				food[FOODNUM] = spawnFood(FOODNUM, game);
 				SNAKENUM = SNAKENUM + 1;
-				snake[SNAKENUM] = spawnSegment(game, 500,500);                                                                                                                                                                               
+				snake[SNAKENUM] = spawnSegment(game, 900,900);                                                                                                                                                                               
 			}	
 			
 			// End the game if snake hits itself
