@@ -64,7 +64,7 @@ function spawnFood(number, game) {
 		var food = new Array();
 		food[number] = new Sprite(16, 16);
         food[number].image  = game.assets['sprite.png'];
-        var randomnumber = Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+        var randomnumber = Math.floor(Math.random() * (20 - 3 + 1)) + 3;
         var int1 = (randomnumber * 16) - 32;
         var int2 = (randomnumber * 16) - 32;
         food[number].x      = int1;
