@@ -148,13 +148,14 @@ window.onload = function() {
             }
 			
 			// Speed up snake as more food is eaten
-			if (bg.age % SPEED != 0) return;
-			if (SNAKENUM >= 5) {
+			if (SNAKENUM >= 5 && SNAKENUM < 10) {
 				SPEED = 2;
-			} else if (SNAKENUM >= 10) {
+			} else if (SNAKENUM >= 15) {
 				SPEED = 1;
+			} else {
+				SNAKE = 3;
 			}
-			
+			if (bg.age % SPEED != 0) return;
             
             // Move up loop
             if(a == 1)
