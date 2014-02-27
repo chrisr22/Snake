@@ -16,6 +16,7 @@
  
 var FOODNUM = 0;
 var SNAKENUM = 0;
+var SPEED = 3;
 
 enchant();
 
@@ -145,6 +146,15 @@ window.onload = function() {
 	                a = 4;
 				}
             }
+			
+			// Speed up snake as more food is eaten
+			if (bg.age % SPEED != 0) return;
+			if (SNAKENUM >= 5) {
+				SPEED = 2;
+			} else if (SNAKENUM >= 10) {
+				SPEED = 1;
+			}
+			
             
             // Move up loop
             if(a == 1)
